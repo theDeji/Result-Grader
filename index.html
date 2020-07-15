@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" >
+    </script>
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <h2>Check Results!</h2>
+        <form class="col-md-4">
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa fa-facebook-square"></i></i></i></a>
+                <a href="#" class="social"><i class="fa fa-google-plus-square"></i></a>
+                <a href="#" class="social"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="maths" type="text" required placeholder="Maths Score">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="english" type="text" required placeholder="English Score">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="computer" type="text" required placeholder="Computer Score">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="biology" type="text" required placeholder="Biology Score">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="chemistry" type="text" required placeholder="Chemistry Score">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="physics" type="text" required placeholder="Physics Score">
+            </div>
+            <button type="button" class="btn btn-dark" id="submit" data-toggle="modal" data-target="#resultModal">Check Grades</button>
+        </form>
+    </div>
+      <!-- Modal -->
+    <div class="modal fade" id="resultModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel" style="color:black; font-weight: bold; opacity: 60%;">Result Panel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row"  style="margin-bottom: 5px;">
+                        <div class="col-md-2"><img src="./avatar.png" style="width: 80px; height: 70px;"></div>
+                        <div class="col-md-9 ml-auto" style="background-color:white;  color: black; text-align:left; margin:13px 25px; font-weight: bold; opacity: 60%;">John Doe Wick<br>
+                            <p style="font-size:x-small;">CMIS Gauraka</p> </div>
+                    </div>
+                      <div class="row">
+                        <table class="table table-hover table-dark" style="border-radius:2%; border-style: hidden;">
+                            <thead style="text-align: center;">
+                              <tr>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Grade</th>
+                              </tr>
+                            </thead>
+                            <tbody style="text-align: center;">
+                              <tr>
+                                <td>Mathematics</td>
+                                <td id="mathGrade"></td>
+                              </tr>
+                              <tr>
+                                <td>English</td>
+                                <td id="englishGrade"></td>
+                              </tr>
+                              <tr>
+                                <td>Computer</td>
+                                <td id="comGrade"></td>
+                              </tr>
+                              <tr>
+                                <td>Biology</td>
+                                <td id="bioGrade"></td>
+                              </tr>
+                              <tr>
+                                <td>Chemistry</td>
+                                <td id="chemGrade"></td>
+                              </tr>
+                              <tr>
+                                <td>Physics</td>
+                                <td id="phyGrade"></td>
+                              </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary">Download Result</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
